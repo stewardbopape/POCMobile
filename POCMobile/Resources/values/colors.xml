@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#2c3e50</color>
+    <color name="colorPrimaryDark">#1B3147</color>
+    <color name="colorAccent">#3498db</color>
+  <!-- NOTIFICATION COLORS -->
+  <color name="Red">#FF0000</color>
+  <color name="Green">#008000</color>
+  <color name="Yellow">#FFFF00</color>
+  <color name="Blue">#0000FF</color>
+  <!-- STATSSA COLOR SCHEME -->
+  <color name="StatsNavy">#0056A7</color>
+  <color name="StatsWhite">#FFFFFF</color>
+  <color name="StatsGreyLight">#FFFFFF</color>
+  <color name="StatsGreyMedium">#D1D3D4</color>
+  <color name="StatsGreyDark">#939598</color>
+  <color name="row_selected">#3EDB36</color>
+  <color name="row_pressed_start">#2F2CD3</color>
+  <color name="row_background">#2F2CD3</color>
+
+  <color name="StatsBlack">#231F20</color>
+  <!-- WORKFLOW COLOR SCHEME -->
+  <color name="Unallocated">#EEEEEE</color>
+  <color name="Allocated">#B0E0E6</color>
+  <color name="PartiallyComplete">#99ff82</color>
+  <color name="ReadyForSupervisor">#909AF6</color>
+  <color name="SupervisorApproved">#3EDB36</color>
+  <color name="SupervisorRejected">#DB363E</color>
+  <color name="HORejected">#DB363E</color>
+
+  <color name="fab_color_1">#ff5252</color>
+  <color name="fab_color_1_muted">#ff8080</color>
+  <color name="fab_color_2">#9c27b0</color>
+  <color name="fab_color_2_muted">#a56ab0</color>
+</resources>

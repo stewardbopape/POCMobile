@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <android.support.v7.widget.RecyclerView
+            android:background="#D3CBCB"
+            android:id="@+id/recycler_view"
+            android:layout_margin="2dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+        <Esri.ArcGISRuntime.UI.MapView
+            android:id="@+id/MyMapView"
+            android:layout_weight="1"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent" />
+        <android.support.design.widget.FloatingActionButton
+            android:id="@+id/flblocation"
+            android:background="#21ff00"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="65dp"
+            app:fabSize="mini"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentRight="true"
+            android:src="@drawable/icmylocationwhite"
+            app:elevation="4dp" />
+        <android.support.design.widget.FloatingActionButton
+            android:id="@+id/flbtnAdd"
+            android:background="#21ff00"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="60dp"
+            app:fabSize="mini"
+            android:layout_gravity="bottom|end"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentRight="true"
+            android:src="@drawable/ic_add_white_24dp"
+            app:elevation="4dp" />
+    </LinearLayout>
+<!--<FrameLayout
+        android:id="@+id/fragPSUListContainer"
+        android:layout_width="match_parent"
+        android:layout_height="750dp"
+        android:background="#E2E2E2"
+        android:layout_gravity="bottom"
+        android:translationY="750dp" />
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/flbtnAdd"
+        android:background="#21ff00"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="right"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="60dp"
+        app:fabSize="mini"
+        android:layout_gravity="bottom|end"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentRight="true"
+        android:src="@drawable/ic_add_white_24dp"
+        app:elevation="4dp" />-->
+<!--<android.support.design.widget.FloatingActionButton
+      android:id="@+id/flbAddMSRecord"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_gravity="right"
+      android:layout_marginRight="10dp"
+      android:layout_marginTop="110dp"
+      app:fabSize="mini"
+      android:layout_below="@id/flbtnAdd"
+      android:layout_alignParentTop="true"
+      android:layout_alignParentRight="true"
+      android:src="@drawable/addmsdrecord"
+      app:elevation="4dp" />
+  <android.support.design.widget.FloatingActionButton
+      android:id="@+id/flbtnCompletePoint"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_gravity="right"
+      android:layout_marginRight="10dp"
+      android:layout_marginTop="160dp"
+      app:fabSize="mini"
+      android:layout_below="@id/flbAddMSRecord"
+      android:layout_alignParentTop="true"
+      android:layout_alignParentRight="true"
+      android:src="@drawable/btncompletepoint"
+      app:elevation="4dp" />
+  <android.support.design.widget.FloatingActionButton
+      android:id="@+id/flbtnCompletePSU"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_gravity="right"
+      android:layout_marginRight="10dp"
+      android:layout_marginTop="210dp"
+      app:fabSize="mini"
+      android:layout_below="@id/flbtnCompletePoint"
+      android:layout_alignParentTop="true"
+      android:layout_alignParentRight="true"
+      android:src="@drawable/btncompletepsu"
+      app:elevation="4dp" />-->
+</FrameLayout>
