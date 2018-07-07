@@ -20,10 +20,13 @@ using Esri.ArcGISRuntime.Security;
 using Esri.ArcGISRuntime.Symbology;
 using Esri.ArcGISRuntime.UI;
 using Esri.ArcGISRuntime.UI.Controls;
+using Newtonsoft.Json;
+using POC.BusinessObjects;
+using POCMobile.Services;
 
 namespace POCMobile.Fragments
 {
-    public class fragMap : Android.Support.V4.App.Fragment, View.IOnTouchListener, ILocationListener
+    public class fragMap : Android.Support.V4.App.Fragment, View.IOnTouchListener, ILocationListener, IServiceDeletegate<object>, IPostServiceDelegate<object>
     {
         bool zoomtoLocation = false;
         LocationManager locMgr;
@@ -35,6 +38,7 @@ namespace POCMobile.Fragments
         FloatingActionButton _flbtrack;
         Esri.ArcGISRuntime.Mapping.Map _map;
         GraphicsOverlay _graphicOverlay;
+        POCService _service;
         public fragMap()
         {
 
@@ -87,6 +91,8 @@ namespace POCMobile.Fragments
             Initialize();
             GetCurrentLcoation();
 
+            this._service = new POCService();
+
         }
 
         private void Initialize()
@@ -98,7 +104,7 @@ namespace POCMobile.Fragments
             var _base = new ArcGISMapImageLayer(new Uri(Config.BASE_SERVICE_URL));
             _map.Basemap.BaseLayers.Add(_base);
 
-            this._mapView.GeoViewTapped += _mapView_GeoViewTapped;
+          //  this._mapView.GeoViewTapped += _mapView_GeoViewTapped;
             this._mapView.Map = _map;
             //this._mapView.Map.MaxScale = 100;
 
@@ -126,34 +132,23 @@ namespace POCMobile.Fragments
         private void _flbtnAdd_Click(object sender, EventArgs e)
         {
             Config.MapTapMode = MapTapMode.Add;
-            fragHome fragement = new fragHome();
+            fragHome fragement = new fragHome(this);
             var trans = FragmentManager.BeginTransaction();
             //trans.SetCustomAnimations(Resource.Animation.gla_there_come, Resource.Animation.gla_there_gone);
             fragement.Show(trans, "add");
         }
 
-        private async void _mapView_GeoViewTapped(object sender, GeoViewInputEventArgs e)
+        public void AddCustomerInformation(INFORMATION information)
         {
-            try
-            {               
-                
-                        CreateNewFeature(e.Location);               
-             
-            }
-            catch (Exception ex)
-            {
-                _mainActivity.RunOnUiThread(() =>
-                {
-                    ShowToastMessage(ex.Message);
-                });
-            }
 
+            var postObject = new PostObject<object>();
+            PostAction action = Config.PostActions.Where(o => o.Code == ActionCode.AddInformation).SingleOrDefault();
+            postObject.PostAction = action;
 
+            postObject.Data = information;
+            this._service.PostObject(this, postObject);
         }
-        private void CreateNewFeature(MapPoint point)
-        {
-           
-        }
+
 
         private void ShowToastMessage(string toastMessage)
         {
@@ -279,6 +274,14 @@ namespace POCMobile.Fragments
 
         }
 
+        public void HandleServiceResults(object resultRootObject, bool isSuccessfull, ActionCode resultType, string message)
+        {
+            Toast.MakeText(this.Context, "success", ToastLength.Short).Show();
+        }
 
+        public void HandlePostResults(ResultObj<object> resultObject)
+        {
+            Toast.MakeText(this.Context, "success", ToastLength.Short).Show();
+        }
     }
 }

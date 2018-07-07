@@ -1,19 +1,522 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:minWidth="300dp"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
     <ScrollView
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:padding="10dp"
-        android:fillViewport="false">
+        android:fillViewport="true">
         <LinearLayout
             android:orientation="vertical"
+            android:background="@color/Blue"
             android:layout_width="fill_parent"
-            android:layout_height="fill_parent">
-            <TextView
+            android:layout_height="wrap_content">
+        <!--<TableLayout
+                   android:layout_width="fill_parent"
+                   android:layout_height="fill_parent">
+        <TableRow>
+          <LinearLayout          
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+          <LinearLayout
+              android:orientation="vertical"
+              android:layout_width="0dp"
+              android:layout_weight="1"
+              android:layout_height="wrap_content">
+            <ImageView
+                android:clickable="true"
+                android:src="@android:drawable/ic_menu_gallery"
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:id="@+id/imgIDPhoto" />
+          </LinearLayout>
+          <LinearLayout             
+              android:orientation="vertical"
+              android:layout_width="0dp"
+              android:layout_weight="1"
+              android:layout_height="wrap_content">
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+              <android.support.design.widget.TextInputLayout
+                  android:layout_width="match_parent"
+                  android:theme="@style/EditTextHint"
+                  android:layout_height="match_parent">
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="number"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:id="@+id/txtIDNo"
+                    android:focusableInTouchMode="false"
+                    android:editable="false"
+                    android:hint="ID Number" />
+              </android.support.design.widget.TextInputLayout>
+            </LinearLayout>
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+              <android.support.design.widget.TextInputLayout
+                  android:layout_width="match_parent"
+                  android:theme="@style/EditTextHint"
+                  android:layout_height="wrap_content">
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="text"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:id="@+id/txtSurname"
+                    android:hint="Surname" />
+              </android.support.design.widget.TextInputLayout>
+            </LinearLayout>
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+              <android.support.design.widget.TextInputLayout
+                  android:layout_width="match_parent"
+                  android:theme="@style/EditTextHint"
+                  android:layout_height="wrap_content">
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="text"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:id="@+id/txtFirstNames"
+                    android:hint="First Names" />
+              </android.support.design.widget.TextInputLayout>
+            </LinearLayout>
+          </LinearLayout>
+          </LinearLayout>
+        </TableRow>
+      </TableLayout>-->
+            <LinearLayout
+                android:orientation="vertical"
+                android:background="@color/StatsNavy"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content">
+                <LinearLayout
+                    android:background="@color/Green"
+                    android:orientation="vertical"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content">
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content">
+                        <TextView
+                            android:layout_width="fill_parent"
+                            android:textColor="#546aea"
+                            android:text="Language"
+                            android:layout_height="wrap_content" />
+                        <Spinner
+                            android:id="@+id/cmbLanguage"
+                            android:layout_width="fill_parent"
+                            android:focusable="true"
+                            android:layout_height="wrap_content" />
+                    </LinearLayout>
+                    <LinearLayout
+                        android:orientation="horizontal"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content">
+                        <android.support.design.widget.TextInputLayout
+                            android:layout_width="match_parent"
+                            android:theme="@style/EditTextHint"
+                            android:layout_height="match_parent">
+                            <EditText
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:inputType="text"
+                                android:textAppearance="?android:attr/textAppearanceSmall"
+                                android:id="@+id/txtAddress1"
+                                android:hint="Street No/Name" />
+                        </android.support.design.widget.TextInputLayout>
+                    </LinearLayout>
+                    <LinearLayout
+                        android:orientation="horizontal"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content">
+                        <android.support.design.widget.TextInputLayout
+                            android:layout_width="match_parent"
+                            android:theme="@style/EditTextHint"
+                            android:layout_height="match_parent">
+                            <EditText
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:inputType="text"
+                                android:textAppearance="?android:attr/textAppearanceSmall"
+                                android:id="@+id/txtAddress2"
+                                android:hint="Suburb" />
+                        </android.support.design.widget.TextInputLayout>
+                    </LinearLayout>
+                    <LinearLayout
+                        android:orientation="horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                        <android.support.design.widget.TextInputLayout
+                            android:layout_width="match_parent"
+                            android:theme="@style/EditTextHint"
+                            android:layout_height="match_parent">
+                            <EditText
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:inputType="text"
+                                android:textAppearance="?android:attr/textAppearanceSmall"
+                                android:id="@+id/txtAddress3"
+                                android:hint="Town" />
+                        </android.support.design.widget.TextInputLayout>
+                    </LinearLayout>
+                    <LinearLayout
+                        android:orientation="horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                        <android.support.design.widget.TextInputLayout
+                            android:layout_width="match_parent"
+                            android:theme="@style/EditTextHint"
+                            android:layout_height="match_parent">
+                            <EditText
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:inputType="number"
+                                android:textAppearance="?android:attr/textAppearanceSmall"
+                                android:id="@+id/txttelephone"
+                                android:hint="Telephone Number" />
+                        </android.support.design.widget.TextInputLayout>
+                    </LinearLayout>
+                    <LinearLayout
+                        android:orientation="horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                        <android.support.design.widget.TextInputLayout
+                            android:layout_width="match_parent"
+                            android:theme="@style/EditTextHint"
+                            android:layout_height="match_parent">
+                            <EditText
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:inputType="number"
+                                android:textAppearance="?android:attr/textAppearanceSmall"
+                                android:id="@+id/txtcelphone"
+                                android:hint="Cellphone Number" />
+                        </android.support.design.widget.TextInputLayout>
+                    </LinearLayout>
+                </LinearLayout>
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content">
+                    <LinearLayout
+                        android:orientation="horizontal"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content">
+                        <android.support.design.widget.TextInputLayout
+                            android:layout_width="match_parent"
+                            android:theme="@style/EditTextHint"
+                            android:layout_height="match_parent">
+                            <EditText
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:inputType="date"
+                                android:textAppearance="?android:attr/textAppearanceSmall"
+                                android:id="@+id/txtappicationdate"
+                                android:hint="Application Date" />
+                        </android.support.design.widget.TextInputLayout>
+                    </LinearLayout>
+                    <LinearLayout
+                        android:orientation="horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                        <android.support.design.widget.TextInputLayout
+                            android:layout_width="match_parent"
+                            android:theme="@style/EditTextHint"
+                            android:layout_height="match_parent">
+                            <EditText
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:inputType="text"
+                                android:textAppearance="?android:attr/textAppearanceSmall"
+                                android:id="@+id/txtbenefitpack"
+                                android:hint="Benefit Pack" />
+                        </android.support.design.widget.TextInputLayout>
+                    </LinearLayout>
+                    <LinearLayout
+                        android:orientation="horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                        <android.support.design.widget.TextInputLayout
+                            android:layout_width="match_parent"
+                            android:theme="@style/EditTextHint"
+                            android:layout_height="match_parent">
+                            <EditText
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:inputType="text"
+                                android:textAppearance="?android:attr/textAppearanceSmall"
+                                android:id="@+id/txtSGC"
+                                android:hint="SGC" />
+                        </android.support.design.widget.TextInputLayout>
+                    </LinearLayout>
+                    <LinearLayout
+                        android:orientation="horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                        <android.support.design.widget.TextInputLayout
+                            android:layout_width="match_parent"
+                            android:theme="@style/EditTextHint"
+                            android:layout_height="match_parent">
+                            <EditText
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:inputType="text"
+                                android:textAppearance="?android:attr/textAppearanceSmall"
+                                android:id="@+id/txtINTSTANCE"
+                                android:hint="TINSTANCE" />
+                        </android.support.design.widget.TextInputLayout>
+                    </LinearLayout>
+                    <LinearLayout
+                        android:orientation="horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                        <android.support.design.widget.TextInputLayout
+                            android:layout_width="match_parent"
+                            android:theme="@style/EditTextHint"
+                            android:layout_height="match_parent">
+                            <EditText
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:inputType="text"
+                                android:textAppearance="?android:attr/textAppearanceSmall"
+                                android:id="@+id/txtAMP"
+                                android:hint="AMP" />
+                        </android.support.design.widget.TextInputLayout>
+                    </LinearLayout>
+                    <LinearLayout
+                        android:orientation="horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                        <android.support.design.widget.TextInputLayout
+                            android:layout_width="match_parent"
+                            android:theme="@style/EditTextHint"
+                            android:layout_height="match_parent">
+                            <EditText
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:inputType="text"
+                                android:textAppearance="?android:attr/textAppearanceSmall"
+                                android:id="@+id/txtTINDEX"
+                                android:hint="TINDEX" />
+                        </android.support.design.widget.TextInputLayout>
+                    </LinearLayout>
+                    <LinearLayout
+                        android:orientation="horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                        <android.support.design.widget.TextInputLayout
+                            android:layout_width="match_parent"
+                            android:theme="@style/EditTextHint"
+                            android:layout_height="match_parent">
+                            <EditText
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:inputType="date"
+                                android:textAppearance="?android:attr/textAppearanceSmall"
+                                android:id="@+id/txtCONNECTION_DATE"
+                                android:hint="Connection Date" />
+                        </android.support.design.widget.TextInputLayout>
+                    </LinearLayout>
+                    <LinearLayout
+                        android:orientation="horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                        <android.support.design.widget.TextInputLayout
+                            android:layout_width="match_parent"
+                            android:theme="@style/EditTextHint"
+                            android:layout_height="match_parent">
+                            <EditText
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:inputType="text"
+                                android:textAppearance="?android:attr/textAppearanceSmall"
+                                android:id="@+id/txtMETER_NO"
+                                android:hint="Meter Number" />
+                        </android.support.design.widget.TextInputLayout>
+                    </LinearLayout>
+                    <LinearLayout
+                        android:orientation="horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                        <android.support.design.widget.TextInputLayout
+                            android:layout_width="match_parent"
+                            android:theme="@style/EditTextHint"
+                            android:layout_height="match_parent">
+                            <EditText
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:inputType="text"
+                                android:textAppearance="?android:attr/textAppearanceSmall"
+                                android:id="@+id/txtAlgorithm"
+                                android:hint="Algorithim" />
+                        </android.support.design.widget.TextInputLayout>
+                    </LinearLayout>
+                    <LinearLayout
+                        android:orientation="horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                        <android.support.design.widget.TextInputLayout
+                            android:layout_width="match_parent"
+                            android:theme="@style/EditTextHint"
+                            android:layout_height="match_parent">
+                            <EditText
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:inputType="text"
+                                android:textAppearance="?android:attr/textAppearanceSmall"
+                                android:id="@+id/txtToken"
+                                android:hint="Token" />
+                        </android.support.design.widget.TextInputLayout>
+                    </LinearLayout>
+                    <LinearLayout
+                        android:orientation="horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                        <android.support.design.widget.TextInputLayout
+                            android:layout_width="match_parent"
+                            android:theme="@style/EditTextHint"
+                            android:layout_height="match_parent">
+                            <EditText
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:inputType="text"
+                                android:textAppearance="?android:attr/textAppearanceSmall"
+                                android:id="@+id/txtEBC"
+                                android:hint="EBC" />
+                        </android.support.design.widget.TextInputLayout>
+                    </LinearLayout>
+                    <LinearLayout
+                        android:orientation="horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                        <android.support.design.widget.TextInputLayout
+                            android:layout_width="match_parent"
+                            android:theme="@style/EditTextHint"
+                            android:layout_height="match_parent">
+                            <EditText
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:inputType="text"
+                                android:textAppearance="?android:attr/textAppearanceSmall"
+                                android:id="@+id/txtTRFR"
+                                android:hint="TRFR" />
+                        </android.support.design.widget.TextInputLayout>
+                    </LinearLayout>
+                    <LinearLayout
+                        android:orientation="horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                        <android.support.design.widget.TextInputLayout
+                            android:layout_width="match_parent"
+                            android:theme="@style/EditTextHint"
+                            android:layout_height="match_parent">
+                            <EditText
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:inputType="text"
+                                android:textAppearance="?android:attr/textAppearanceSmall"
+                                android:id="@+id/txtPOLE"
+                                android:hint="Pole No" />
+                        </android.support.design.widget.TextInputLayout>
+                    </LinearLayout>
+                    <LinearLayout
+                        android:orientation="horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                        <android.support.design.widget.TextInputLayout
+                            android:layout_width="match_parent"
+                            android:theme="@style/EditTextHint"
+                            android:layout_height="match_parent">
+                            <EditText
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:inputType="text"
+                                android:textAppearance="?android:attr/textAppearanceSmall"
+                                android:id="@+id/txtSEALING"
+                                android:hint="Sealing" />
+                        </android.support.design.widget.TextInputLayout>
+                    </LinearLayout>
+                    <LinearLayout
+                        android:orientation="horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                        <android.support.design.widget.TextInputLayout
+                            android:layout_width="match_parent"
+                            android:theme="@style/EditTextHint"
+                            android:layout_height="match_parent">
+                            <EditText
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:inputType="number"
+                                android:textAppearance="?android:attr/textAppearanceSmall"
+                                android:id="@+id/txtCOCNUMBER"
+                                android:hint="COC Number" />
+                        </android.support.design.widget.TextInputLayout>
+                    </LinearLayout>
+                    <LinearLayout
+                        android:orientation="horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                        <android.support.design.widget.TextInputLayout
+                            android:layout_width="match_parent"
+                            android:theme="@style/EditTextHint"
+                            android:layout_height="match_parent">
+                            <EditText
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:inputType="numberDecimal"
+                                android:textAppearance="?android:attr/textAppearanceSmall"
+                                android:id="@+id/txtFee"
+                                android:hint="Fee" />
+                        </android.support.design.widget.TextInputLayout>
+                    </LinearLayout>
+                    <LinearLayout
+                        android:orientation="horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                        <android.support.design.widget.TextInputLayout
+                            android:layout_width="match_parent"
+                            android:theme="@style/EditTextHint"
+                            android:layout_height="match_parent">
+                            <EditText
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:inputType="date"
+                                android:textAppearance="?android:attr/textAppearanceSmall"
+                                android:id="@+id/txtSTART_DATE"
+                                android:hint="Start Date" />
+                        </android.support.design.widget.TextInputLayout>
+                    </LinearLayout>
+                    <LinearLayout
+                        android:orientation="horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                        <android.support.design.widget.TextInputLayout
+                            android:layout_width="match_parent"
+                            android:theme="@style/EditTextHint"
+                            android:layout_height="match_parent">
+                            <EditText
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:inputType="text"
+                                android:textAppearance="?android:attr/textAppearanceSmall"
+                                android:id="@+id/txtPS_Feedback"
+                                android:hint="PS Feedback" />
+                        </android.support.design.widget.TextInputLayout>
+                    </LinearLayout>
+                </LinearLayout>
+            <!--<TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:id="@+id/txtLocation"
@@ -40,23 +543,24 @@
                 android:src="@android:drawable/ic_menu_gallery"
                 android:layout_width="match_parent"
                 android:layout_height="150dp"
-                android:id="@+id/img_view" />
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content">
-                <Button
-                    android:id="@+id/btnAdd"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:text="Save" />
-                <Button
-                    android:id="@+id/btnCancel"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:text="Cancel" />
+                android:id="@+id/img_view" />-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <Button
+                        android:id="@+id/btnAdd"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Save" />
+                    <Button
+                        android:id="@+id/btnCancel"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Cancel" />
+                </LinearLayout>
             </LinearLayout>
         </LinearLayout>
     </ScrollView>
-</RelativeLayout>
+</LinearLayout>

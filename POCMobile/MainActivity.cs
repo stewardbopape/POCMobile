@@ -14,6 +14,7 @@ using Android.Support.V7.App;
 using Android.Views;
 using Android.Widget;
 using POCMobile.Fragments;
+using POCMobile.Services;
 using SupportFragment = Android.Support.V4.App.Fragment;
 
 namespace POCMobile
@@ -27,6 +28,8 @@ namespace POCMobile
         Android.Support.V7.Widget.Toolbar toolbar;
         LocationManager locMgr;
         string locationProvider;
+        NetworkReachability _networkReachability;
+        public bool isBound = false;
 
 
         protected override void OnCreate(Bundle savedInstanceState)

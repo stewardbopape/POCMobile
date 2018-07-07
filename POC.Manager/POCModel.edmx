@@ -1,0 +1,221 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="POCDBModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="CL_ROLES">
+          <Key>
+            <PropertyRef Name="ROLE_ID" />
+          </Key>
+          <Property Name="ROLE_ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="ROLE_DESC" Type="varchar" MaxLength="50" />
+        </EntityType>
+        <!--Errors Found During Generation:
+warning 6013: The table/view 'POCDB.dbo.CL_USER_ROLES' does not have a primary key defined and no valid primary key could be inferred. This table/view has been excluded. To use the entity, you will need to review your schema, add the correct keys, and uncomment it.
+        <EntityType Name="CL_USER_ROLES">
+          <Property Name="USER_ROLE_ID" Type="int" />
+          <Property Name="ROLE_ID" Type="int" />
+          <Property Name="USER_ID" Type="int" />
+        </EntityType>-->
+        <EntityType Name="CL_USERS">
+          <Key>
+            <PropertyRef Name="USER_ID" />
+          </Key>
+          <Property Name="USER_ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="USERNAME" Type="varchar" MaxLength="50" />
+          <Property Name="PASSWORD" Type="varchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="INFORMATION">
+          <Key>
+            <PropertyRef Name="INFO_ID" />
+          </Key>
+          <Property Name="INFO_ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="ID_NO" Type="varchar" MaxLength="13" />
+          <Property Name="SURNAME" Type="varchar" MaxLength="50" />
+          <Property Name="FIRST_NAMES" Type="varchar" MaxLength="70" />
+          <Property Name="LANGUAGE" Type="varchar" MaxLength="50" />
+          <Property Name="ADDRESS1" Type="varchar" MaxLength="50" />
+          <Property Name="ADDRESS2" Type="varchar" MaxLength="50" />
+          <Property Name="ADDRESS3" Type="varchar" MaxLength="50" />
+          <Property Name="CELLNUM" Type="varchar" MaxLength="50" />
+          <Property Name="TELEPHONE" Type="varchar" MaxLength="50" />
+          <Property Name="APPLICATION_DATE" Type="datetime" />
+          <Property Name="BENEFITPACK" Type="varchar" MaxLength="50" />
+          <Property Name="SGC" Type="varchar" MaxLength="50" />
+          <Property Name="TINSTANCE" Type="varchar" MaxLength="50" />
+          <Property Name="AMP" Type="int" />
+          <Property Name="TINDEX" Type="varchar" MaxLength="50" />
+          <Property Name="CONNECTION_DATE" Type="datetime" />
+          <Property Name="METERNUMBER" Type="varchar" MaxLength="50" />
+          <Property Name="ALGORITHM" Type="varchar" MaxLength="50" />
+          <Property Name="TOKEN" Type="varchar" MaxLength="50" />
+          <Property Name="EBC" Type="varchar" MaxLength="50" />
+          <Property Name="TRFR" Type="varchar" MaxLength="50" />
+          <Property Name="POLE" Type="varchar" MaxLength="50" />
+          <Property Name="SEALING" Type="varchar" MaxLength="50" />
+          <Property Name="COCNUMBER" Type="varchar" MaxLength="50" />
+          <Property Name="FEE" Type="decimal" Precision="18" Scale="0" />
+          <Property Name="START_DATE" Type="datetime" />
+          <Property Name="USER_ID" Type="int" />
+          <Property Name="PS_FEEDBACK" Type="varchar" MaxLength="50" />
+          <Property Name="LATITUDE" Type="varchar" MaxLength="50" />
+          <Property Name="LONGTUDE" Type="varchar" MaxLength="50" />
+          <Property Name="PHOTO" Type="varbinary(max)" />
+          <Property Name="SYNC_DATE" Type="datetime" />
+        </EntityType>
+        <EntityContainer Name="POCDBModelStoreContainer">
+          <EntitySet Name="CL_ROLES" EntityType="Self.CL_ROLES" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="CL_USERS" EntityType="Self.CL_USERS" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="INFORMATION" EntityType="Self.INFORMATION" Schema="dbo" store:Type="Tables" />
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="POCDBModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="CL_ROLES">
+          <Key>
+            <PropertyRef Name="ROLE_ID" />
+          </Key>
+          <Property Name="ROLE_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="ROLE_DESC" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="CL_USERS">
+          <Key>
+            <PropertyRef Name="USER_ID" />
+          </Key>
+          <Property Name="USER_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="USERNAME" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="PASSWORD" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="INFORMATION">
+          <Key>
+            <PropertyRef Name="INFO_ID" />
+          </Key>
+          <Property Name="INFO_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="ID_NO" Type="String" MaxLength="13" FixedLength="false" Unicode="false" />
+          <Property Name="SURNAME" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="FIRST_NAMES" Type="String" MaxLength="70" FixedLength="false" Unicode="false" />
+          <Property Name="LANGUAGE" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="ADDRESS1" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="ADDRESS2" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="ADDRESS3" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="CELLNUM" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="TELEPHONE" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="APPLICATION_DATE" Type="DateTime" Precision="3" />
+          <Property Name="BENEFITPACK" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="SGC" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="TINSTANCE" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="AMP" Type="Int32" />
+          <Property Name="TINDEX" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="CONNECTION_DATE" Type="DateTime" Precision="3" />
+          <Property Name="METERNUMBER" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="ALGORITHM" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="TOKEN" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="EBC" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="TRFR" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="POLE" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="SEALING" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="COCNUMBER" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="FEE" Type="Decimal" Precision="18" Scale="0" />
+          <Property Name="START_DATE" Type="DateTime" Precision="3" />
+          <Property Name="USER_ID" Type="Int32" />
+          <Property Name="PS_FEEDBACK" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="LATITUDE" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="LONGTUDE" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="PHOTO" Type="Binary" MaxLength="Max" FixedLength="false" />
+          <Property Name="SYNC_DATE" Type="DateTime" Precision="3" />
+        </EntityType>
+        <EntityContainer Name="POCDBEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="CL_ROLES" EntityType="Self.CL_ROLES" />
+          <EntitySet Name="CL_USERS" EntityType="Self.CL_USERS" />
+          <EntitySet Name="INFORMATION" EntityType="Self.INFORMATION" />
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="POCDBModelStoreContainer" CdmEntityContainer="POCDBEntities">
+          <EntitySetMapping Name="CL_ROLES">
+            <EntityTypeMapping TypeName="POCDBModel.CL_ROLES">
+              <MappingFragment StoreEntitySet="CL_ROLES">
+                <ScalarProperty Name="ROLE_ID" ColumnName="ROLE_ID" />
+                <ScalarProperty Name="ROLE_DESC" ColumnName="ROLE_DESC" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="CL_USERS">
+            <EntityTypeMapping TypeName="POCDBModel.CL_USERS">
+              <MappingFragment StoreEntitySet="CL_USERS">
+                <ScalarProperty Name="USER_ID" ColumnName="USER_ID" />
+                <ScalarProperty Name="USERNAME" ColumnName="USERNAME" />
+                <ScalarProperty Name="PASSWORD" ColumnName="PASSWORD" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="INFORMATION">
+            <EntityTypeMapping TypeName="POCDBModel.INFORMATION">
+              <MappingFragment StoreEntitySet="INFORMATION">
+                <ScalarProperty Name="INFO_ID" ColumnName="INFO_ID" />
+                <ScalarProperty Name="ID_NO" ColumnName="ID_NO" />
+                <ScalarProperty Name="SURNAME" ColumnName="SURNAME" />
+                <ScalarProperty Name="FIRST_NAMES" ColumnName="FIRST_NAMES" />
+                <ScalarProperty Name="LANGUAGE" ColumnName="LANGUAGE" />
+                <ScalarProperty Name="ADDRESS1" ColumnName="ADDRESS1" />
+                <ScalarProperty Name="ADDRESS2" ColumnName="ADDRESS2" />
+                <ScalarProperty Name="ADDRESS3" ColumnName="ADDRESS3" />
+                <ScalarProperty Name="CELLNUM" ColumnName="CELLNUM" />
+                <ScalarProperty Name="TELEPHONE" ColumnName="TELEPHONE" />
+                <ScalarProperty Name="APPLICATION_DATE" ColumnName="APPLICATION_DATE" />
+                <ScalarProperty Name="BENEFITPACK" ColumnName="BENEFITPACK" />
+                <ScalarProperty Name="SGC" ColumnName="SGC" />
+                <ScalarProperty Name="TINSTANCE" ColumnName="TINSTANCE" />
+                <ScalarProperty Name="AMP" ColumnName="AMP" />
+                <ScalarProperty Name="TINDEX" ColumnName="TINDEX" />
+                <ScalarProperty Name="CONNECTION_DATE" ColumnName="CONNECTION_DATE" />
+                <ScalarProperty Name="METERNUMBER" ColumnName="METERNUMBER" />
+                <ScalarProperty Name="ALGORITHM" ColumnName="ALGORITHM" />
+                <ScalarProperty Name="TOKEN" ColumnName="TOKEN" />
+                <ScalarProperty Name="EBC" ColumnName="EBC" />
+                <ScalarProperty Name="TRFR" ColumnName="TRFR" />
+                <ScalarProperty Name="POLE" ColumnName="POLE" />
+                <ScalarProperty Name="SEALING" ColumnName="SEALING" />
+                <ScalarProperty Name="COCNUMBER" ColumnName="COCNUMBER" />
+                <ScalarProperty Name="FEE" ColumnName="FEE" />
+                <ScalarProperty Name="START_DATE" ColumnName="START_DATE" />
+                <ScalarProperty Name="USER_ID" ColumnName="USER_ID" />
+                <ScalarProperty Name="PS_FEEDBACK" ColumnName="PS_FEEDBACK" />
+                <ScalarProperty Name="LATITUDE" ColumnName="LATITUDE" />
+                <ScalarProperty Name="LONGTUDE" ColumnName="LONGTUDE" />
+                <ScalarProperty Name="PHOTO" ColumnName="PHOTO" />
+                <ScalarProperty Name="SYNC_DATE" ColumnName="SYNC_DATE" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

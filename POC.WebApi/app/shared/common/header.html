@@ -1,0 +1,55 @@
+<div class="brand visible-xs">
+
+  <!-- toggle offscreen menu -->
+  <div class="toggle-offscreen">
+    <offscreen class="visible-xs"></offscreen>
+  </div>
+  <!-- /toggle offscreen menu -->
+
+  <!-- logo -->
+	<div class="brand-logo">
+		<img class="header-logo" data-ng-src="assets/images/logo.png" height="15" alt="">
+		<p class="app-name text-center">Application Name</p>
+	</div>
+  <!-- /logo -->
+
+  <!-- toggle chat sidebar small screen-->
+  <div class="hidden toggle-chat">
+    <a href="javascript:;" class="hamburger-icon v2 visible-xs" data-ng-click="app.layout.isChatOpen = !app.layout.isChatOpen">
+      <span></span>
+      <span></span>
+      <span></span>
+    </a>
+  </div>
+  <!-- /toggle chat sidebar small screen-->
+
+</div>
+
+<ul class="nav navbar-nav hidden-xs">
+  <li>
+    <p class="navbar-text">
+       Application Name
+    </p>
+  </li>
+</ul>
+
+<ul class="nav navbar-nav navbar-right hidden-xs">
+  <li class="dropdown" dropdown>
+    <a href="javascript:;" class="dropdown-toggle" dropdown-toggle>
+      <img data-ng-src="{{user.avatar}}" class="header-avatar img-circle ml10" alt="user" title="user">
+      <span class="pull-left">
+        {{user.fname}} {{user.lname}}
+      </span>
+    </a>
+  </li>
+	<li>
+		<a href="javascript:;" class="" >
+			<img src="assets/images/down.svg" alt="" width="20">
+		</a>
+	</li>
+	<li>
+		<a href="javascript:;" class="" >
+			<img src="assets/images/call.svg" alt="" width="20">
+		</a>
+	</li>
+</ul>

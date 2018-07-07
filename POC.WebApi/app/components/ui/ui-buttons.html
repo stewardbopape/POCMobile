@@ -1,0 +1,335 @@
+<div class="row mb15">
+  <div class="col-sm-6">
+    <div class="row">
+      <div class="col-xs-12 mb15">
+          <div class="panel">
+              <div class="panel-heading border">
+                  Color variants
+              </div>
+              <div class="panel-body">
+                  <div popover-code class="bs-component">
+                      <button type="button" class="btn bg-color-1">color 1</button>
+                      <button type="button" class="btn bg-color-2">color 2</button>
+                      <button type="button" class="btn bg-color-3">color 3</button>
+                      <button type="button" class="btn bg-color-4">color 4</button>
+                      <button type="button" class="btn bg-color-5">color 5</button>
+                      <button type="button" class="btn btn-default" disabled="">Disabled</button>
+                  </div>
+                  <hr>
+                  <div popover-code class="bs-component">
+                      <button class="btn btn-default">Cancel</button>
+                      <button type="button" class="btn btn-primary">Save</button>
+                      <button type="button" class="btn btn-success">Success</button>
+                      <button type="button" class="btn btn-info">Info</button>
+                      <button type="button" class="btn btn-warning">Warning</button>
+                      <button type="button" class="btn btn-danger">Danger</button>
+                      <button type="button" class="btn btn-default" disabled="">Disabled</button>
+                  </div>
+              </div>
+          </div>
+        </div>
+        <div class="col-xs-12 mb15 demo-button3">
+            <div class="panel">
+                <div class="panel-heading border">
+                    Rounded flavour
+                </div>
+                <div class="panel-body">
+                    <div popover-code class="bs-component">
+                        <a href="javascript:;" class="btn btn-default btn-round btn-lg">Large Rounded</a>
+                        <a href="javascript:;" class="btn btn-primary btn-outline btn-round">Normal Rounded</a>
+                        <a href="javascript:;" class="btn btn-info btn-round btn-sm">
+                            <i class="fa fa-tint"></i> Hello
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-xs-12 mb15">
+            <div class="panel">
+                <div class="panel-heading border">
+                    Dropdowns & dropups
+                </div>
+                <div class="panel-body">
+                    <div popover-code class="bs-component">
+                        <span uib-dropdown on-toggle="toggled(open)">
+                            <a href id="simple-dropdown" uib-dropdown-toggle>
+                                Click me for a dropdown
+                            </a>
+                            <ul class="dropdown-menu" uib-dropdown-menu aria-labelledby="simple-dropdown">
+                                <li ng-repeat="choice in items">
+                                    <a href>{{choice}}</a>
+                                </li>
+                            </ul>
+                        </span>
+                        <!-- Single button -->
+                        <div class="btn-group" uib-dropdown is-open="status.isopen">
+                            <button id="single-button" type="button" class="btn btn-primary" uib-dropdown-toggle ng-disabled="disabled">
+                                Button dropdown <span class="caret"></span>
+                            </button>
+                            <ul class="dropdown-menu" uib-dropdown-menu role="menu" aria-labelledby="single-button">
+                                <li role="menuitem"><a href="#">Action</a></li>
+                                <li role="menuitem"><a href="#">Another action</a></li>
+                                <li role="menuitem"><a href="#">Something else here</a></li>
+                                <li class="divider"></li>
+                                <li role="menuitem"><a href="#">Separated link</a></li>
+                            </ul>
+                        </div>
+                        <!-- Split button -->
+                        <div class="btn-group" uib-dropdown>
+                            <button id="split-button" type="button" class="btn btn-danger">Action</button>
+                            <button type="button" class="btn btn-danger" uib-dropdown-toggle>
+                                <span class="caret"></span>
+                                <span class="sr-only">Split button!</span>
+                            </button>
+                            <ul class="dropdown-menu" uib-dropdown-menu role="menu" aria-labelledby="split-button">
+                                <li role="menuitem"><a href="#">Action</a></li>
+                                <li role="menuitem"><a href="#">Another action</a></li>
+                                <li role="menuitem"><a href="#">Something else here</a></li>
+                                <li class="divider"></li>
+                                <li role="menuitem"><a href="#">Separated link</a></li>
+                            </ul>
+                        </div>
+                        <!-- Single button using append-to-body -->
+                        <div class="btn-group" uib-dropdown dropdown-append-to-body>
+                            <button id="btn-append-to-body" type="button" class="btn btn-primary" uib-dropdown-toggle>
+                                Dropdown on Body <span class="caret"></span>
+                            </button>
+                            <ul class="dropdown-menu" uib-dropdown-menu role="menu" aria-labelledby="btn-append-to-body">
+                                <li role="menuitem"><a href="#">Action</a></li>
+                                <li role="menuitem"><a href="#">Another action</a></li>
+                                <li role="menuitem"><a href="#">Something else here</a></li>
+                                <li class="divider"></li>
+                                <li role="menuitem"><a href="#">Separated link</a></li>
+                            </ul>
+                        </div>
+                        <!-- Single button using template-url -->
+                        <div class="btn-group" uib-dropdown>
+                            <button id="button-template-url" type="button" class="btn btn-primary" uib-dropdown-toggle ng-disabled="disabled">
+                                Dropdown using template <span class="caret"></span>
+                            </button>
+                            <ul class="dropdown-menu" uib-dropdown-menu template-url="dropdown.html" aria-labelledby="button-template-url"></ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-xs-12 mb15">
+            <div class="panel">
+                <div class="panel-heading border">
+                    Block level
+                </div>
+                <div class="panel-body">
+                    <div popover-code class="bs-component">
+                        <button type="button" class="btn btn-default btn-lg btn-block">Block level button</button>
+                        <button type="button" class="btn btn-default btn-block">Block level button</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-xs-12 mb15">
+            <div class="panel">
+                <div class="panel-heading border">
+                    Sizing options
+                </div>
+                <div class="panel-body">
+                    <div popover-code class="bs-component">
+                        <a href="javascript:;" class="btn btn-default btn-lg mr5">Large button</a>
+                        
+                        <a href="javascript:;" class="btn btn-primary mr5">Default button</a>
+                      
+                        <a href="javascript:;" class="btn btn-primary btn-sm mr5">Small button</a>
+                      
+                        <a href="javascript:;" class="btn btn-primary btn-xs">Extra small button</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+         <div class="col-xs-12 mb15 demo-button3">
+             <div class="panel">
+                 <div class="panel-heading border">
+                     Icon buttons
+                 </div>
+                 <div class="panel-body">
+                     <div popover-code class="bs-component">
+                         <button type="button" class="btn btn-primary btn-sm btn-icon loading-demo mr5">
+                             <i class="fa fa-send mr5"></i>
+                             <span>Submit</span>
+                         </button>
+                         <button type="button" class="btn btn-primary btn-sm btn-icon mr5">
+                             <i class="fa fa-exclamation-triangle"></i>
+                             <span>Warning</span>
+                         </button>
+                         <button type="button" class="btn btn-info btn-sm btn-icon mr5">
+                             <i class="fa fa-cloud-upload"></i>
+                             <span>Upload</span>
+                         </button>
+                         <button class="btn btn-success btn-icon-icon btn-sm mr5">
+                             <i class="fa fa-ellipsis-v"></i>
+                         </button>
+                     </div>
+                 </div>
+             </div>
+         </div>
+
+      </div>
+    </div>
+
+  <div class="col-sm-6">
+    <div class="row">
+      <div class="col-xs-12 mb15">
+          <div class="panel">
+              <div class="panel-heading border">
+                  Outline variants
+              </div>
+              <div class="panel-body">
+                  <div popover-code class="bs-component">
+                      <button class="btn btn-default btn-outline">Default</button>
+                      <button type="button" class="btn btn-primary btn-outline">Primary</button>
+                      <button type="button" class="btn btn-success btn-outline">Success</button>
+                      <button type="button" class="btn btn-info btn-outline">Info</button>
+                      <button type="button" class="btn btn-warning btn-outline">Warning</button>
+                      <button type="button" class="btn btn-danger btn-outline">Danger</button>
+                      <button type="button" class="btn btn-default btn-outline" disabled="">Disabled</button>
+                  </div>
+              </div>
+          </div>
+      </div>
+
+      <div class="col-xs-12 mb15">
+
+          <div class="panel">
+              <div class="panel-heading border">
+                  Justified links
+              </div>
+              <div class="panel-body">
+                  <div popover-code class="bs-component">
+                      <div class="btn-group btn-group-justified">
+                          <a class="btn btn-primary" role="button">Left</a>
+                          <a class="btn bg-color-1" role="button">Middle</a>
+                          <a class="btn bg-color-5" role="button">Right</a>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+
+      <div class="col-xs-12 mb15">
+          <div class="panel">
+              <div class="panel-heading border">
+                  Groups
+              </div>
+              <div class="panel-body">
+                  <div popover-code class="bs-component">
+                      <div class="btn-group">
+                          <button type="button" class="btn btn-default">Left</button>
+                          <button type="button" class="btn btn-default">Middle</button>
+                          <button type="button" class="btn btn-default">Right</button>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+
+      <div class="col-xs-12 mb15">
+          <div class="panel">
+              <div class="panel-heading border">
+                  Toolbar
+              </div>
+              <div class="panel-body">
+                  <div popover-code class="bs-component">
+                      <div class="btn-toolbar" role="toolbar">
+                          <div class="btn-group mb15">
+                              <button type="button" class="btn bg-color-3">1</button>
+                              <button type="button" class="btn bg-color-3">2</button>
+                              <button type="button" class="btn bg-color-3">3</button>
+                              <button type="button" class="btn bg-color-3">4</button>
+                          </div>
+                          <div class="btn-group mb15">
+                              <button type="button" class="btn btn-primary">5</button>
+                              <button type="button" class="btn btn-primary">6</button>
+                              <button type="button" class="btn btn-primary">7</button>
+                          </div>
+                          <div class="btn-group mb15">
+                              <button type="button" class="btn ">8</button>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+
+      <div class="col-xs-12 mb15">
+          <div class="panel">
+              <div class="panel-heading border">
+                  Nesting
+              </div>
+              <div class="panel-body">
+                  <div popover-code class="bs-component">
+                      <div class="btn-group">
+                          <button type="button" class="btn btn-default">1</button>
+                          <button type="button" class="btn btn-default">2</button>
+                          <div class="btn-group" uib-dropdown>
+                              <button id="single-button1" type="button" class="btn btn-default" uib-dropdown-toggle ng-disabled="disabled">
+                                  Button dropdown <span class="caret"></span>
+                              </button>
+                              <ul class="dropdown-menu" uib-dropdown-menu role="menu" aria-labelledby="single-button">
+                                  <li role="menuitem"><a href="#">Action</a></li>
+                                  <li role="menuitem"><a href="#">Another action</a></li>
+                                  <li role="menuitem"><a href="#">Something else here</a></li>
+                                  <li class="divider"></li>
+                                  <li role="menuitem"><a href="#">Separated link</a></li>
+                              </ul>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+
+      <div class="col-xs-12 mb15">
+          <div class="panel">
+              <div class="panel-heading border">
+                  Vertical groups
+              </div>
+              <div class="panel-body">
+                  <div popover-code class="bs-component">
+                      <div class="btn-group-vertical">
+                          <button type="button" class="btn btn-default">Top</button>
+                          <button type="button" class="btn btn-default">Middle</button>
+                          <button type="button" class="btn btn-default">Bottom</button>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+
+      <div class="col-xs-12 demo-button3">
+          <div class="panel">
+              <div class="panel-heading border">
+                  Social addons
+              </div>
+              <div class="panel-body">
+                  <div popover-code class="bs-component">
+                      <a class="btn btn-icon btn-sm btn-facebook mr5" disabled><i class="fa fa-facebook"></i> Facebook </a>
+                      <a class="btn btn-icon btn-sm btn-twitter mr5"><i class="fa fa-twitter"></i> Twitter </a>
+                      <a class="btn btn-icon-icon btn-sm btn-soundcloud"><i class="fa fa-soundcloud"></i></a>
+                      <a class="btn btn-icon-icon btn-sm btn-google-plus btn-round"><i class="fa fa-google-plus"></i></a>
+                  </div>
+              </div>
+          </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script type="text/ng-template" id="dropdown.html">
+  <ul class="dropdown-menu" uib-dropdown-menu role="menu" aria-labelledby="button-template-url">
+    <li role="menuitem"><a href="#">Action in Template</a></li>
+    <li role="menuitem"><a href="#">Another action in Template</a></li>
+    <li role="menuitem"><a href="#">Something else here</a></li>
+    <li class="divider"></li>
+    <li role="menuitem"><a href="#">Separated link in Template</a></li>
+  </ul>
+</script>
